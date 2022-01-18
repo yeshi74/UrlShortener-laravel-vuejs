@@ -21,3 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/yt/{any}', [App\Http\Controllers\UrlShortenerController::class, 'handel']);
+
+Route::post('/url/shorten', [App\Http\Controllers\UrlShortenerController::class, 'store']);
